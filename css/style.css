@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Shine';
+    src: url('../ShineMonday.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Shine', sans-serif;
+}
+
 .bg-pink-mist {
     background-color: #F7DAE7;
 }
@@ -47,4 +59,11 @@
 .hero-content {
     position: relative;
     z-index: 2;
+}
+
+.about-section,
+.vision-mission-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 100px;
 }
