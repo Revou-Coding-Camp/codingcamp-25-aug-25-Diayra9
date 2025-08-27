@@ -67,3 +67,24 @@ body {
     margin: 0 auto;
     padding: 0 100px;
 }
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #F7DAE7;
+}
+.buy-button {
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #A55166;
+}
+
+.custom-modal-height {
+    background-color: #F7DAE7;
+    height: 100px;
+    max-width: 500px;
+}

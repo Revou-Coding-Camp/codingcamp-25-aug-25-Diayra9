@@ -12,17 +12,17 @@
     <header class="bg-cherry-soda text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img src="photo/amaranth-logo.png"
-                    alt="Amaranthie Flower Shop Logo - Elegant floral design with purple amaranth flowers"
-                    class="h-10 w-10 mr-3">
-                <h1 class="text-2xl font-bold">Amaranthie Flower Shop</h1>
+                <a href="index.html" class="flex items-center">
+                    <img src="photo/amaranth-logo.png" alt="Amaranthie Flower Shop Logo" class="h-10 w-10 mr-3">
+                    <h1 class="text-2xl font-bold">Amaranthie Flower Shop</h1>
+                </a>
             </div>
             <nav>
                 <ul class="flex space-x-5">
-                    <li><a href="#" class="hover:underline font-bold">Home</a></li>
-                    <li><a href="#" class="hover:underline font-bold">Shop</a></li>
-                    <li><a href="#" class="hover:underline font-bold">About</a></li>
-                    <li><a href="#" class="hover:underline font-bold">Contact</a></li>
+                    <li><a href="index.html" class="hover:underline font-bold">Home</a></li>
+                    <li><a href="#shop" class="hover:underline font-bold">Shop</a></li>
+                    <li><a href="#about" class="hover:underline font-bold">About</a></li>
+                    <li><a href="#contact" class="hover:underline font-bold">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,7 +44,7 @@
         </div>
     </section>
 
-    <section class="container mx-auto py-10 about-section">
+    <section id="about" class="container mx-auto py-10 about-section">
         <h2 class="text-3xl font-bold text-center mb-6">About Us</h2>
         <p class="text-gray-700 text-lg text-center mb-6">
             Amaranthie adalah toko bunga yang lahir dari rasa cinta pada keindahan dan makna di balik setiap tangkai bunga.
@@ -87,33 +87,34 @@
         </div>
     </section>
 
-    <section class="container mx-auto py-10">
+    <section id="shop" class="container mx-auto py-10">
         <h2 class="text-3xl font-bold text-center mb-6">Our Best Sellers</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
                 <img src="photo/roses.jpg" alt="Rose" class="product-image">
                 <h3 class="text-xl font-semibold mt-2">Roses</h3>
                 <p class="text-gray-600">$19.99</p>
-                <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
+                <button class="buy-button mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals" onclick="showBuyPopup()">Pre-Order Now</button>
             </div>
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
                 <img src="photo/tulips.jpg" alt="Tulip" class="product-image">
                 <h3 class="text-xl font-semibold mt-2">Tulips</h3>
                 <p class="text-gray-600">$15.99</p>
-                <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
+                <button class="buy-button mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals" onclick="showBuyPopup()">Pre-Order Now</button>
             </div>
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
                 <img src="photo/sunflowers.jpg" alt="Sunflower" class="product-image">
                 <h3 class="text-xl font-semibold mt-2">Sunflowers</h3>
                 <p class="text-gray-600">$12.99</p>
-                <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
+                <button class="buy-button mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals" onclick="showBuyPopup()">Pre-Order Now</button>
             </div>
         </div>
     </section>
 
-    <section class="container mx-auto py-8">
+    <section id="contact" class="container mx-auto py-8">
         <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
-        <form class="bg-white p-6 rounded-lg shadow-lg">
+        <form class="bg-white p-6 rounded-lg shadow-lg" id="contactForm" onsubmit="return validateForm(event);">
+            <div id="feedbackMessage" class="hidden bg-green-200 text-green-800 p-4 rounded mb-4"></div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <!-- Left Column -->
                 <div class="space-y-4">
@@ -168,6 +169,13 @@
             <p>&copy; 2025 Amaranthie Florist. All rights reserved.</p>
         </div>
     </footer>
+
+    <div id="popupModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white rounded-lg p-6 shadow-lg relative flex items-center justify-center custom-modal-height">
+            <button id="closePopup" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">&times;</button>
+            <h2 class="text-lg font-bold mb-4">Silahkan isi data di kotak message/contact us dibawah, lalu kirim</h2>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
