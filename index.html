@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaranthie Florist</title>
+    <link rel="icon" href="photo/amaranth-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-mist">
+    <header class="bg-cherry-soda text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Amaranthie Flower Shop</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">Shop</a></li>
+                    <li><a href="#" class="hover:underline">About</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-96" style="background-image: url('https://source.unsplash.com/1600x900/?flowers');">
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+            <h2 class="text-white text-4xl font-bold">Fresh Flowers for Every Occasion</h2>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="container mx-auto py-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Our Best Sellers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
+                <img src="photo/roses.jpg" alt="Rose" class="rounded-t-lg">
+                <h3 class="text-xl font-semibold mt-2">Roses</h3>
+                <p class="text-gray-600">$19.99</p>
+                <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
+            </div>
+            <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
+                <img src="photo/tulips.jpg" alt="Tulip" class="rounded-t-lg">
+                <h3 class="text-xl font-semibold mt-2">Tulips</h3>
+                <p class="text-gray-600">$15.99</p>
+                <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
+            </div>
+            <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
+                <img src="photo/sunflowers.jpg" alt="Sunflower" class="rounded-t-lg">
+                <h3 class="text-xl font-semibold mt-2">Sunflowers</h3>
+                <p class="text-gray-600">$12.99</p>
+                <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cherry-soda text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Flower Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
