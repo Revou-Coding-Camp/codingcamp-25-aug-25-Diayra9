@@ -88,3 +88,22 @@ nav a:hover {
     height: 100px;
     max-width: 500px;
 }
+
+.about-section,
+.vision-mission-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-image {
+    max-height: 300px;
+}
+
+@media (min-width: 768px) {
+
+    .about-section,
+    .vision-mission-section {
+        padding: 0 50px;
+    }
+}

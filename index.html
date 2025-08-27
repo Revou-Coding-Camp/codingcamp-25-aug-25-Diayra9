@@ -12,32 +12,48 @@
     <header class="bg-cherry-soda text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <a href="index.html" class="flex items-center">
+                <a href="#home" class="flex items-center">
                     <img src="photo/amaranth-logo.png" alt="Amaranthie Flower Shop Logo" class="h-10 w-10 mr-3">
                     <h1 class="text-2xl font-bold">Amaranthie Flower Shop</h1>
                 </a>
             </div>
-            <nav>
+            <div class="block lg:hidden relative">
+                <button id="hamburger" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                </button>
+                <nav id="navMenu" class="hidden absolute right-0 mt-2 w-48 bg-cherry-soda rounded-lg shadow-lg z-10">
+                    <ul class="flex flex-col space-y-2 p-4">
+                        <li><a href="#home" class="hover:underline font-bold text-white">Home</a></li>
+                        <li><a href="#about" class="hover:underline font-bold text-white">Our Profile</a></li>
+                        <li><a href="#shop" class="hover:underline font-bold text-white">Shop</a></li>
+                        <li><a href="#contact" class="hover:underline font-bold text-white">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav id="desktopNav" class="hidden lg:block">
                 <ul class="flex space-x-5">
-                    <li><a href="index.html" class="hover:underline font-bold">Home</a></li>
+                    <li><a href="#home" class="hover:underline font-bold">Home</a></li>
+                    <li><a href="#about" class="hover:underline font-bold">Our Profile</a></li>
                     <li><a href="#shop" class="hover:underline font-bold">Shop</a></li>
-                    <li><a href="#about" class="hover:underline font-bold">About</a></li>
                     <li><a href="#contact" class="hover:underline font-bold">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="slider-container">
-        <div class="slide active"
-            style="background-image: url('photo/bg-01.jpg');">
+    <section id="home" class="slider-container">
+        <div class="slide active">
         </div>
     
-        <div class="slide" style="background-image: url('photo/bg-02.jpg');"></div>
-        <div class="slide" style="background-image: url('photo/bg-03.jpg');"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
         
         <div class="flex items-center justify-center h-full bg-black bg-opacity-40 hero-content">
             <div class="text-center text-white">
+                <h2 id="greetingText" class="text-2xl font-bold mb-2 hidden"></h2>
                 <h2 class="text-4xl font-bold mb-4">Fresh and Bloom with Amaranthie</h2>
                 <p class="text-xl opacity-90">Temukan keindahan bunga segar yang dirangkai penuh cinta, untuk setiap momen istimewa Anda.</p>
             </div>
@@ -45,7 +61,7 @@
     </section>
 
     <section id="about" class="container mx-auto py-10 about-section">
-        <h2 class="text-3xl font-bold text-center mb-6">About Us</h2>
+        <h2 class="text-3xl font-bold text-center mb-6">What Is  Amaranthie?</h2>
         <p class="text-gray-700 text-lg text-center mb-6">
             Amaranthie adalah toko bunga yang lahir dari rasa cinta pada keindahan dan makna di balik setiap tangkai bunga.
             Sejak awal berdiri, kami berkomitmen untuk menghadirkan rangkaian bunga yang bukan hanya indah dipandang, tetapi
@@ -63,7 +79,7 @@
         </p>
     </section>
 
-    <section class="container mx-auto py-3 vision-mission-section">
+    <section id="vision" class="container mx-auto py-3 vision-mission-section">
         <h2 class="text-3xl font-bold text-center mb-6">Vision and Mission</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Left Column: Vision -->
@@ -78,7 +94,7 @@
             <div class="bg-white p-6 rounded-lg shadow-lg">
                 <h3 class="text-2xl font-semibold mb-4">Mission</h3>
                 <ul class="list-disc list-inside text-gray-700">
-                    <li>Menyediakan rangkaian bunga segar dengan kualitas terbaik yang dirangkai secara profesional.</li>
+                    <li>Menyediakan rangkaian bunga dengan kualitas terbaik.</li>
                     <li>Memberikan layanan yang ramah, cepat, dan personal.</li>
                     <li>Menciptakan desain rangkaian bunga yang kreatif, estetik, dan sesuai kebutuhan acara atau perayaan.</li>
                     <li>Mendukung produk bunga lokal dan ramah lingkungan.</li>
@@ -87,35 +103,34 @@
         </div>
     </section>
 
-    <section id="shop" class="container mx-auto py-10">
-        <h2 class="text-3xl font-bold text-center mb-6">Our Best Sellers</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section id="shop" class="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-2xl font-bold text-center mb-6">Our Best Sellers</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
                 <img src="photo/roses.jpg" alt="Rose" class="product-image">
-                <h3 class="text-xl font-semibold mt-2">Roses</h3>
+                <h3 class="text-xl font-semibold mt-2">Bouquet of Roses</h3>
                 <p class="text-gray-600">$19.99</p>
                 <button class="buy-button mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals" onclick="showBuyPopup()">Pre-Order Now</button>
             </div>
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
                 <img src="photo/tulips.jpg" alt="Tulip" class="product-image">
-                <h3 class="text-xl font-semibold mt-2">Tulips</h3>
+                <h3 class="text-xl font-semibold mt-2">Bouquet of Tulips</h3>
                 <p class="text-gray-600">$15.99</p>
                 <button class="buy-button mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals" onclick="showBuyPopup()">Pre-Order Now</button>
             </div>
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
                 <img src="photo/sunflowers.jpg" alt="Sunflower" class="product-image">
-                <h3 class="text-xl font-semibold mt-2">Sunflowers</h3>
+                <h3 class="text-xl font-semibold mt-2">Bouquet of Sunflowers</h3>
                 <p class="text-gray-600">$12.99</p>
                 <button class="buy-button mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals" onclick="showBuyPopup()">Pre-Order Now</button>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container mx-auto py-8">
-        <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
-        <form class="bg-white p-6 rounded-lg shadow-lg" id="contactForm" onsubmit="return validateForm(event);">
-            <div id="feedbackMessage" class="hidden bg-green-200 text-green-800 p-4 rounded mb-4"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <section id="contact" class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-2xl font-bold text-center mb-6">Contact Us</h2>
+        <form class="bg-white p-6 rounded-lg shadow-lg" id="contactForm" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                 <!-- Left Column -->
                 <div class="space-y-4">
                     <div>
@@ -136,8 +151,7 @@
                 <div class="space-y-4">
                     <div>
                         <label for="flower" class="block text-gray-700 font-medium mb-2">Choose Flower:</label>
-                        <select id="flower" name="flower" required
-                            class="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cherry-soda focus:border-transparent">
+                        <select id="flower" name="flower" required class="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cherry-soda focus:border-transparent">
                             <option value="">Select a flower...</option>
                             <option value="roses">Roses - $19.99</option>
                             <option value="tulips">Tulips - $15.99</option>
@@ -162,6 +176,7 @@
                 </button>
             </div>
         </form>
+        <div id="submittedData" class="hidden mt-6 bg-green-200 text-green-800 p-4 rounded-lg"></div>
     </section>
 
     <footer class="bg-cherry-soda text-white p-4">
@@ -170,10 +185,28 @@
         </div>
     </footer>
 
-    <div id="popupModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div id="namePopup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-20">
+        <div class="bg-white rounded-lg p-6 shadow-lg relative max-w-md w-full">
+            <button id="closeNamePopup" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">&times;</button>
+            <h2 class="text-lg font-bold mb-4">Input Nama Kamu</h2>
+            <input type="text" id="popupNameInput" class="border border-gray-300 p-2 w-full rounded-lg mb-4"
+                placeholder="Tulis nama di sini...">
+            <button id="saveName" class="bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Simpan</button>
+        </div>
+    </div>
+
+    <div id="popupModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-20 hidden">
         <div class="bg-white rounded-lg p-6 shadow-lg relative flex items-center justify-center custom-modal-height">
             <button id="closePopup" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">&times;</button>
             <h2 class="text-lg font-bold mb-4">Silahkan isi data di kotak message/contact us dibawah, lalu kirim</h2>
+        </div>
+    </div>
+
+    <div id="validationPopup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center relative max-w-sm">
+            <button id="closeValidationPopup" class="absolute top-2 right-2 text-gray-600">&times;</button>
+            <p id="validationMessage" class="text-gray-700 text-lg"></p>
+            <button id="okValidation" class="mt-4 bg-pink-500 text-white px-4 py-2 rounded">Oke</button>
         </div>
     </div>
 
