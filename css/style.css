@@ -13,3 +13,38 @@
 .bg-ruby-petals {
     background-color: #A55166;
 }
+
+.product-image {
+    max-height: 370px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}

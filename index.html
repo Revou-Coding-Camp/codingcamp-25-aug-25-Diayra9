@@ -11,43 +11,56 @@
 <body class="bg-pink-mist">
     <header class="bg-cherry-soda text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Amaranthie Flower Shop</h1>
+            <div class="flex items-center">
+                <img src="photo/amaranth-logo.png"
+                    alt="Amaranthie Flower Shop Logo - Elegant floral design with purple amaranth flowers"
+                    class="h-10 w-10 mr-3">
+                <h1 class="text-2xl font-bold">Amaranthie Flower Shop</h1>
+            </div>
             <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:underline">Home</a></li>
-                    <li><a href="#" class="hover:underline">Shop</a></li>
-                    <li><a href="#" class="hover:underline">About</a></li>
-                    <li><a href="#" class="hover:underline">Contact</a></li>
+                <ul class="flex space-x-5">
+                    <li><a href="#" class="hover:underline font-bold">Home</a></li>
+                    <li><a href="#" class="hover:underline font-bold">Shop</a></li>
+                    <li><a href="#" class="hover:underline font-bold">About</a></li>
+                    <li><a href="#" class="hover:underline font-bold">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-cover bg-center h-96" style="background-image: url('https://source.unsplash.com/1600x900/?flowers');">
-        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
-            <h2 class="text-white text-4xl font-bold">Fresh Flowers for Every Occasion</h2>
+    <section class="slider-container">
+        <div class="slide active"
+            style="background-image: url('photo/bg-01.jpg');">
+        </div>
+    
+        <div class="slide" style="background-image: url('photo/bg-02.jpg');"></div>
+        <div class="slide" style="background-image: url('photo/bg-03.jpg');"></div>
+        
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-40 hero-content">
+            <div class="text-center text-white">
+                <h2 class="text-4xl font-bold mb-4">Fresh and Bloom with Amaranthie</h2>
+                <p class="text-xl opacity-90">Temukan keindahan bunga segar yang dirangkai penuh cinta, untuk setiap momen istimewa Anda.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Product Showcase -->
     <section class="container mx-auto py-10">
         <h2 class="text-3xl font-bold text-center mb-6">Our Best Sellers</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
-                <img src="photo/roses.jpg" alt="Rose" class="rounded-t-lg">
+                <img src="photo/roses.jpg" alt="Rose" class="product-image">
                 <h3 class="text-xl font-semibold mt-2">Roses</h3>
                 <p class="text-gray-600">$19.99</p>
                 <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
             </div>
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
-                <img src="photo/tulips.jpg" alt="Tulip" class="rounded-t-lg">
+                <img src="photo/tulips.jpg" alt="Tulip" class="product-image">
                 <h3 class="text-xl font-semibold mt-2">Tulips</h3>
                 <p class="text-gray-600">$15.99</p>
                 <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
             </div>
             <div class="bg-bubblegum p-4 rounded-lg shadow-lg">
-                <img src="photo/sunflowers.jpg" alt="Sunflower" class="rounded-t-lg">
+                <img src="photo/sunflowers.jpg" alt="Sunflower" class="product-image">
                 <h3 class="text-xl font-semibold mt-2">Sunflowers</h3>
                 <p class="text-gray-600">$12.99</p>
                 <button class="mt-4 bg-cherry-soda text-white py-2 px-4 rounded hover:bg-ruby-petals">Add to Cart</button>
@@ -55,10 +68,61 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="container mx-auto py-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
+        <form class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- Left Column -->
+                <div class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Name:</label>
+                        <input type="text" id="name" name="name" required class="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cherry-soda focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email:</label>
+                        <input type="email" id="email" name="email" required class="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cherry-soda focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required class="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cherry-soda focus:border-transparent">
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-4">
+                    <div>
+                        <label for="flower" class="block text-gray-700 font-medium mb-2">Choose Flower:</label>
+                        <select id="flower" name="flower" required
+                            class="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cherry-soda focus:border-transparent">
+                            <option value="">Select a flower...</option>
+                            <option value="roses">Roses - $19.99</option>
+                            <option value="tulips">Tulips - $15.99</option>
+                            <option value="sunflowers">Sunflowers - $12.99</option>
+                            <option value="lilies">Lilies - $22.99</option>
+                            <option value="orchids">Orchids - $25.99</option>
+                            <option value="carnations">Carnations - $14.99</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Message:</label>
+                        <textarea id="message" name="message" rows="6" required class="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cherry-soda focus:border-transparent"
+                            placeholder="Tell us about your occasion, delivery preferences, or any special requests..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-left">
+                <button type="submit" class="bg-cherry-soda text-white py-3 px-8 rounded-lg hover:bg-ruby-petals transition duration-300 font-semibold text-lg">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </section>
+
     <footer class="bg-cherry-soda text-white p-4">
         <div class="container mx-auto text-center">
-            <p>&copy; 2023 Flower Shop. All rights reserved.</p>
+            <p>&copy; 2025 Amaranthie Florist. All rights reserved.</p>
         </div>
     </footer>
 
